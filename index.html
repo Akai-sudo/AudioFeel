@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AudioFeel DEMO</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.4.0/dist/tf.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection@0.0.1/dist/face-landmarks-detection.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="button-33" role="button">AudioFeel</h1>
+        <button id="songMeta" class="button-33" role="button">Currently playing: </button>
+        <audio id="audioPlayer" controls>
+            Your browser does not support the audio element.
+        </audio>
+        <h1 id="status" class="button-33">Loading camera...Please wait</h1>
+        <button id="wink" class="button-33" role="button">Detecting wink...</button>
+        <button id="mouth" class="button-33" role="button">Detecting mouth...</button>
+        <button id="volumeButton" class="button-33" role="button">Detection phase</button>
+    </div>
+
+    <canvas id="output"></canvas>
+    <video id="webcam" playsinline style="
+                    visibility: hidden;
+                    width: auto;
+                    height: auto;
+                    ">
+    </video>
+
+    <script src="getmusic.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
